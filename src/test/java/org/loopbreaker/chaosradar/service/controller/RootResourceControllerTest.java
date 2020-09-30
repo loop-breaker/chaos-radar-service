@@ -15,7 +15,12 @@ public class RootResourceControllerTest {
     private RootResourceController controller;
 
     @Test
-    public void contextLoads() throws Exception {
+    public void testContextLoads() throws Exception {
         assertThat(controller).isNotNull();
+    }
+
+    @Test
+    public void testRootResource() {
+        assertThat(controller.getRootResource()).isNotNull();
     }
 }
