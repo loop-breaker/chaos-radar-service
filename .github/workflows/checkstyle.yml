@@ -1,3 +1,5 @@
+name: Check Style
+
 on: pull_request
 
 jobs:
