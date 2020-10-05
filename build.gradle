@@ -47,3 +47,11 @@ dependencyManagement {
 test {
 	useJUnitPlatform()
 }
+
+
+pitest {
+	targetClasses = ['org.loopbreaker.chaosradar.*']  //by default "${project.group}.*"
+	threads = 4
+	outputFormats = ['XML', 'HTML']
+	timestampedReports = false
+}
