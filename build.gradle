@@ -47,3 +47,12 @@ dependencyManagement {
 test {
 	useJUnitPlatform()
 }
+
+
+pitest {
+	targetClasses = ['org.loopbreakerchaosradar.*']  //by default "${project.group}.*"
+	pitestVersion = '1.4.1' //not needed when a default PIT version should be used
+	threads = 4
+	outputFormats = ['XML', 'HTML']
+	timestampedReports = false
+}
