@@ -27,7 +27,12 @@ public class RootResourceControllerTest {
 
     @Test
     public void testRootResourceHasBody() {
-        assertThat(controller.getRootResource().getBody()).isEqualTo("bob");
+        assertThat(controller.getRootResource().getBody()).isNotNull();
+    }
+
+    @Test
+    public void testRootResourceHasLinks() {
+        assertThat(controller.getRootResource().getBody().getLink("_links").isPresent());
     }
 
     @Test
