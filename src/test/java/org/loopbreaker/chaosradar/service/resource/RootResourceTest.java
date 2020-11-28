@@ -9,6 +9,6 @@ public class RootResourceTest {
     @Test
     public void testRootResourceHasLinks() {
         RootResource rootResource = new RootResource();
-        assertThat(rootResource.getLinks("_links")).isNotNull();
+        assertThat(rootResource.getLink("_links").isPresent());
     }
 }
