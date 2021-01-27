@@ -8,11 +8,17 @@ import java.util.Map;
 import java.util.UUID;
 
 public class ChaosRadarService {
+
     private final Map<String, Radar> radarsByName = new HashMap<>();
     private final Map<UUID, Radar> radarsByUUID = new HashMap<>();
 
-    public List<Radar> getRadarsByName() {
+
+    public List<Radar> getRadars() {
         return List.copyOf(radarsByName.values());
+    }
+
+    public Radar getRadarsByName(final String name) {
+        return radarsByName.get(name);
     }
 
     public Either<String, UUID> createRadar(Radar radar) {
