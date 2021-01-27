@@ -15,7 +15,7 @@ public class ChaosRadarServiceTest {
     @Test
     public void testGetRadarsHasNoRadars() {
         final ChaosRadarService service = new ChaosRadarService();
-        assertThat(service.getRadarsByName(), empty());
+        assertThat(service.getRadars(), empty());
     }
 
     @Test
